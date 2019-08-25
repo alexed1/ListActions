@@ -1,0 +1,33 @@
+=== Test Reports
+FORMAT  FILE
+──────  ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+txt     /Users/aedelstein/GDrive/dev/ListActions/.sfdx/tools/testresults/apex/test-result.txt
+txt     /Users/aedelstein/GDrive/dev/ListActions/.sfdx/tools/testresults/apex/test-run-id.txt
+junit   /Users/aedelstein/GDrive/dev/ListActions/.sfdx/tools/testresults/apex/test-result-7079A00000DluP3-junit.xml
+json    /Users/aedelstein/GDrive/dev/ListActions/.sfdx/tools/testresults/apex/test-result-7079A00000DluP3.json
+
+=== Test Results
+TEST NAME                                OUTCOME  MESSAGE  RUNTIME (MS)
+───────────────────────────────────────  ───────  ───────  ────────────
+GetFirstTest.GetFirstReturnsFirstResult  Pass              41
+
+=== Test Summary
+NAME                 VALUE
+───────────────────  ────────────────────────────────────────────────────────────
+Outcome              Passed
+Tests Ran            1
+Passing              1
+Failing              0
+Skipped              0
+Pass Rate            100%
+Fail Rate            0%
+Test Start Time      Aug 24, 2019 7:14 PM
+Test Execution Time  41 ms
+Test Total Time      41 ms
+Command Time         3022 ms
+Hostname             https://connect-agility-2605-dev-ed.cs46.my.salesforce.com/
+Org Id               00D9A00000097b4UAA
+Username             test-ftnzp91kgqgp@example.com
+Test Run Id          7079A00000DluP3
+User Id              0059A000001eZ9wQAE
+

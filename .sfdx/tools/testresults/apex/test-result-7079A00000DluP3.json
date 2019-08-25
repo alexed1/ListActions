@@ -1,0 +1,46 @@
+{
+    "summary": {
+        "outcome": "Passed",
+        "testsRan": 1,
+        "passing": 1,
+        "failing": 0,
+        "skipped": 0,
+        "passRate": "100%",
+        "failRate": "0%",
+        "testStartTime": "Aug 24, 2019 7:14 PM",
+        "testExecutionTime": "41 ms",
+        "testTotalTime": "41 ms",
+        "commandTime": "3022 ms",
+        "hostname": "https://connect-agility-2605-dev-ed.cs46.my.salesforce.com/",
+        "orgId": "00D9A00000097b4UAA",
+        "username": "test-ftnzp91kgqgp@example.com",
+        "testRunId": "7079A00000DluP3",
+        "userId": "0059A000001eZ9wQAE"
+    },
+    "tests": [
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v46.0/tooling/sobjects/ApexTestResult/07M9A0000018BRnUAM"
+            },
+            "Id": "07M9A0000018BRnUAM",
+            "QueueItemId": "7099A000000AQHSQA4",
+            "StackTrace": null,
+            "Message": null,
+            "AsyncApexJobId": "7079A00000DluP3QAJ",
+            "MethodName": "GetFirstReturnsFirstResult",
+            "Outcome": "Pass",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v46.0/tooling/sobjects/ApexClass/01p9A000001FgTOQA0"
+                },
+                "Id": "01p9A000001FgTOQA0",
+                "Name": "GetFirstTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 41,
+            "FullName": "GetFirstTest.GetFirstReturnsFirstResult"
+        }
+    ]
+}

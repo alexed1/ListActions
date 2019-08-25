@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2019-08-24T19:14:20-07:00" hostname="https://connect-agility-2605-dev-ed.cs46.my.salesforce.com/" tests="1" failures="0"  errors="0"  time="0.04">
+        <properties>
+            <property name="outcome" value="Passed"/>
+            <property name="testsRan" value="1"/>
+            <property name="passing" value="1"/>
+            <property name="failing" value="0"/>
+            <property name="skipped" value="0"/>
+            <property name="passRate" value="100%"/>
+            <property name="failRate" value="0%"/>
+            <property name="testStartTime" value="Aug 24, 2019 7:14 PM"/>
+            <property name="testExecutionTime" value="0.04 s"/>
+            <property name="testTotalTime" value="0.04 s"/>
+            <property name="commandTime" value="3.02 s"/>
+            <property name="hostname" value="https://connect-agility-2605-dev-ed.cs46.my.salesforce.com/"/>
+            <property name="orgId" value="00D9A00000097b4UAA"/>
+            <property name="username" value="test-ftnzp91kgqgp@example.com"/>
+            <property name="testRunId" value="7079A00000DluP3"/>
+            <property name="userId" value="0059A000001eZ9wQAE"/>
+        </properties>
+        <testcase name="GetFirstReturnsFirstResult" classname="GetFirstTest" time="0.04">
+        </testcase>
+    </testsuite>
+</testsuites>

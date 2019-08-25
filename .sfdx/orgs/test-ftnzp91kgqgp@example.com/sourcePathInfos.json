@@ -1,0 +1,420 @@
+[
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1566687062587,
+            "changeTime": 1566687174131,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1566687062587,
+            "changeTime": 1566687062587,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default",
+            "isDirectory": true,
+            "size": 480,
+            "modifiedTime": 1566688285482,
+            "changeTime": 1566688285482,
+            "contentHash": "2420936b22f3c881de460db5ee082d43dff6db91",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/applications",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/applications",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062587,
+            "changeTime": 1566687062587,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/aura",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/aura",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062587,
+            "changeTime": 1566687062587,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes",
+            "isDirectory": true,
+            "size": 256,
+            "modifiedTime": 1566697183205,
+            "changeTime": 1566697183205,
+            "contentHash": "f8b9527153741854a1ddad280a7af14e44408b2e",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirst.cls",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirst.cls",
+            "isDirectory": false,
+            "size": 1371,
+            "modifiedTime": 1566697311744,
+            "changeTime": 1566697311744,
+            "contentHash": "b03fd8320c0991a9f6292b2f84f11b0c49cd0c2a",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirst.cls-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirst.cls-meta.xml",
+            "isDirectory": false,
+            "size": 186,
+            "modifiedTime": 1566687357272,
+            "changeTime": 1566687357272,
+            "contentHash": "aa3cb827207012abb92d13fd3da31bdb3a085b64",
+            "isMetadataFile": true,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/contentassets",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/contentassets",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062588,
+            "changeTime": 1566687062588,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/flexipages",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/flexipages",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062588,
+            "changeTime": 1566687062588,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/layouts",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/layouts",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1566688285480,
+            "changeTime": 1566688285480,
+            "contentHash": "67ebb33d2cb2b2ec9f9e2bad01194536da5ed1cb",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/lwc",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/lwc",
+            "isDirectory": true,
+            "size": 128,
+            "modifiedTime": 1566687406924,
+            "changeTime": 1566687406924,
+            "contentHash": "a973ac1b5be0e216b2a2db1b82ae5ba97f4086f4",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/objects",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/objects",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1566688285475,
+            "changeTime": 1566688285475,
+            "contentHash": "b829671bff8a596557e5761c81b78b008670e078",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/permissionsets",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/permissionsets",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062588,
+            "changeTime": 1566687062588,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/staticresources",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/staticresources",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062588,
+            "changeTime": 1566687062588,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/tabs",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/tabs",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062588,
+            "changeTime": 1566687062588,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/triggers",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/triggers",
+            "isDirectory": true,
+            "size": 64,
+            "modifiedTime": 1566687062588,
+            "changeTime": 1566687062588,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions",
+            "isDirectory": true,
+            "size": 320,
+            "modifiedTime": 1566687406928,
+            "changeTime": 1566687406928,
+            "contentHash": "62533bf04610bd2b3dd430aef44fc35fe8f23ec0",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/objects/ApprovalProcessStepDefinition__c/ApprovalProcessStepDefinition__c.object-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/objects/ApprovalProcessStepDefinition__c/ApprovalProcessStepDefinition__c.object-meta.xml",
+            "isDirectory": false,
+            "size": 5207,
+            "modifiedTime": 1566688285477,
+            "changeTime": 1566688285477,
+            "contentHash": "d4352f6a1e090c05f1d8579782f2e46fc0a2471d",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/layouts/ApprovalProcessStepDefinition__c-ApprovalProcessStepDefinition Layout.layout-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/layouts/ApprovalProcessStepDefinition__c-ApprovalProcessStepDefinition Layout.layout-meta.xml",
+            "isDirectory": false,
+            "size": 1947,
+            "modifiedTime": 1566688285480,
+            "changeTime": 1566688285480,
+            "contentHash": "11d783040f4136795b5cfb29705ebffa45e29dff",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
+            "isDirectory": false,
+            "size": 5038,
+            "modifiedTime": 1566688285483,
+            "changeTime": 1566688285483,
+            "contentHash": "75f62f9ba924ede81801fa680be8e70e70120e75",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
+            "isDirectory": false,
+            "size": 4700,
+            "modifiedTime": 1566688285487,
+            "changeTime": 1566688285487,
+            "contentHash": "ccedb9f7930bc2f062ed90a969328f283f89907c",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
+            "isDirectory": false,
+            "size": 4700,
+            "modifiedTime": 1566688285491,
+            "changeTime": 1566688285491,
+            "contentHash": "ccedb9f7930bc2f062ed90a969328f283f89907c",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Admin.profile-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles/Admin.profile-meta.xml",
+            "isDirectory": false,
+            "size": 20155,
+            "modifiedTime": 1566688285501,
+            "changeTime": 1566688285501,
+            "contentHash": "9fdfd87e736f168181669a40eb1ed29585a965cc",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/objects/ApprovalProcessStepDefinition__c",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/objects/ApprovalProcessStepDefinition__c",
+            "isDirectory": true,
+            "size": 96,
+            "modifiedTime": 1566688285477,
+            "changeTime": 1566688285477,
+            "contentHash": "435cf9ebbb7b5eca4ecc19b42e6ad7a82b7a5549",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/profiles",
+            "isDirectory": true,
+            "size": 192,
+            "modifiedTime": 1566688285501,
+            "changeTime": 1566688285501,
+            "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/FixtureData.cls",
+        {
+            "state": "u",
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/FixtureData.cls",
+            "isDirectory": false,
+            "isMetadataFile": false,
+            "size": 993,
+            "modifiedTime": 1566699243608,
+            "changeTime": 1566699243608,
+            "contentHash": "1cc3dcac158a92b13427ea02892b2f8792cfb5a4"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/FixtureData.cls-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/FixtureData.cls-meta.xml",
+            "isDirectory": false,
+            "size": 189,
+            "modifiedTime": 1566697183205,
+            "changeTime": 1566697183205,
+            "contentHash": "fe887e4058f27d2a98af8db77c90d95be2b62ae3",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirstTest.cls",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirstTest.cls",
+            "isDirectory": false,
+            "size": 708,
+            "modifiedTime": 1566699159742,
+            "changeTime": 1566699159742,
+            "contentHash": "fdefc7d79d274605b53ce336ff3c860e76cc1ac4",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirstTest.cls-meta.xml",
+        {
+            "sourcePath": "/Users/aedelstein/GDrive/dev/ListActions/force-app/main/default/classes/GetFirstTest.cls-meta.xml",
+            "isDirectory": false,
+            "size": 190,
+            "modifiedTime": 1566691915356,
+            "changeTime": 1566691915356,
+            "contentHash": "958d66c07e556128cc04720f4bef6a4645dd9ae7",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ]
+]

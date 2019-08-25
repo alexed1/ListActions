@@ -1,0 +1,46 @@
+{
+    "summary": {
+        "outcome": "Failed",
+        "testsRan": 1,
+        "passing": 0,
+        "failing": 1,
+        "skipped": 0,
+        "passRate": "0%",
+        "failRate": "100%",
+        "testStartTime": "Aug 24, 2019 7:09 PM",
+        "testExecutionTime": "36 ms",
+        "testTotalTime": "36 ms",
+        "commandTime": "3616 ms",
+        "hostname": "https://connect-agility-2605-dev-ed.cs46.my.salesforce.com/",
+        "orgId": "00D9A00000097b4UAA",
+        "username": "test-ftnzp91kgqgp@example.com",
+        "testRunId": "7079A00000DluOK",
+        "userId": "0059A000001eZ9wQAE"
+    },
+    "tests": [
+        {
+            "attributes": {
+                "type": "ApexTestResult",
+                "url": "/services/data/v46.0/tooling/sobjects/ApexTestResult/07M9A0000018BRdUAM"
+            },
+            "Id": "07M9A0000018BRdUAM",
+            "QueueItemId": "7099A000000AQHIQA4",
+            "StackTrace": "Class.GetFirst.execute: line 12, column 1\nClass.GetFirstTest.GetFirstReturnsFirstResult: line 15, column 1",
+            "Message": "System.NullPointerException: Attempt to de-reference a null object",
+            "AsyncApexJobId": "7079A00000DluOKQAZ",
+            "MethodName": "GetFirstReturnsFirstResult",
+            "Outcome": "Fail",
+            "ApexClass": {
+                "attributes": {
+                    "type": "ApexClass",
+                    "url": "/services/data/v46.0/tooling/sobjects/ApexClass/01p9A000001FgTOQA0"
+                },
+                "Id": "01p9A000001FgTOQA0",
+                "Name": "GetFirstTest",
+                "NamespacePrefix": null
+            },
+            "RunTime": 36,
+            "FullName": "GetFirstTest.GetFirstReturnsFirstResult"
+        }
+    ]
+}
