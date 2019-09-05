@@ -72,6 +72,11 @@ public with sharing class FindRecordsInCollection {
     }
     
     public  class Results {
+
+        public Results() {
+           singleOutputMember = new ApprovalProcessStepDefinition__c();
+           multipleOutputMembers = new List<ApprovalProcessStepDefinition__c>();
+        }
      
       @InvocableVariable
       public ApprovalProcessStepDefinition__c singleOutputMember;
