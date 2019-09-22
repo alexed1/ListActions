@@ -25,7 +25,8 @@ public with sharing class GetStringsFromLists {
     }
 
     public class Requests {
-      @InvocableVariable(required=true)
+      @InvocableVariable
+      //consider requiring this. however there are use cases where someone wants to pass in null without it blowing up, and required makes it blow up. So better not
       public List<AP_AllowedSubmitter__c> inputCollection; //for Spring '20 change this to a dynamic
 
       @InvocableVariable
