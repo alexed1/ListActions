@@ -16,18 +16,19 @@ public with sharing class MapCollection {
                 key = null;
             }
         }
-
+        List<Account> outputCollection = new List<Account>();
         List<Account> inputCollection = requestList[0].inputCollection;
 
         for (String curKey : keyValue.keySet()) {
             for (Account acc : inputCollection) {
-                acc.put(curKey, keyValue.get(curKey));
+                Account newAcc = acc.clone();
+                newAcc.put(curKey, keyValue.get(curKey));
+                outputCollection.add(newAcc);
             }
         }
 
-
         Results response = new Results();
-        response.outputCollection = inputCollection;
+        response.outputCollection = outputCollection;
         List<Results> responseWrapper = new List<Results>();
         responseWrapper.add(response);
 
