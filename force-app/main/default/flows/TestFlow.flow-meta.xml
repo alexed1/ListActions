@@ -79,6 +79,33 @@
         </outputParameters>
     </actionCalls>
     <actionCalls>
+        <name>Join_Collections</name>
+        <label>Join Collections</label>
+        <locationX>513</locationX>
+        <locationY>813</locationY>
+        <actionName>JoinCollections</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Loop_through_filterred_accounts</targetReference>
+        </connector>
+        <inputParameters>
+            <name>inputCollection2</name>
+            <value>
+                <elementReference>input_collection</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>inputCollection</name>
+            <value>
+                <elementReference>input_collection</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>output_collection</assignToReference>
+            <name>outputCollection</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>map_collection</name>
         <label>map_collection</label>
         <locationX>288</locationX>
@@ -98,6 +125,33 @@
             <name>keyValuePairs</name>
             <value>
                 <stringValue>&quot;Name&quot;, &quot;SomeName&quot;</stringValue>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>output_collection</assignToReference>
+            <name>outputCollection</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Remove_Record</name>
+        <label>Remove Record</label>
+        <locationX>210</locationX>
+        <locationY>703</locationY>
+        <actionName>RemoveRecordInCollection</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Loop_through_filterred_accounts</targetReference>
+        </connector>
+        <inputParameters>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>inputCollection</name>
+            <value>
+                <elementReference>input_collection</elementReference>
             </value>
         </inputParameters>
         <outputParameters>
@@ -242,7 +296,7 @@
         <locationY>344</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>copy_collection</targetReference>
+            <targetReference>Join_Collections</targetReference>
         </connector>
         <object>Account</object>
         <outputReference>input_collection</outputReference>
