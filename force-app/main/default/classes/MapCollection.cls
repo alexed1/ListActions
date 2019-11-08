@@ -2,28 +2,30 @@ public with sharing class MapCollection {
     @InvocableMethod
     public static List <Results> mapCollection(List<Requests> requestList) {
 
-        String keyValuePairs = requestList[0].keyValuePairs;
-
-        Pattern mPattern = pattern.compile('([^,"\\s*]+)');
-        Matcher mMatcher = mPattern.matcher(keyValuePairs);
-        Map<String, String> keyValue = new Map<String, String>();
-        String key;
-        while (mMatcher.find()) {
-            if (key == null) {
-                key = mMatcher.group(0);
-            } else {
-                keyValue.put(key, mMatcher.group(0));
-                key = null;
-            }
-        }
         List<Account> outputCollection = new List<Account>();
         List<Account> inputCollection = requestList[0].inputCollection;
+        String keyValuePairs = requestList[0].keyValuePairs;
+        if (inputCollection != null && !inputCollection.isEmpty() && keyValuePairs != null) {
 
-        for (String curKey : keyValue.keySet()) {
-            for (Account acc : inputCollection) {
-                Account newAcc = acc.clone();
-                newAcc.put(curKey, keyValue.get(curKey));
-                outputCollection.add(newAcc);
+            Pattern mPattern = pattern.compile('([^,"\\s*]+)');
+            Matcher mMatcher = mPattern.matcher(keyValuePairs);
+            Map<String, String> keyValue = new Map<String, String>();
+            String key;
+            while (mMatcher.find()) {
+                if (key == null) {
+                    key = mMatcher.group(0);
+                } else {
+                    keyValue.put(key, mMatcher.group(0));
+                    key = null;
+                }
+            }
+
+            for (String curKey : keyValue.keySet()) {
+                for (Account acc : inputCollection) {
+                    Account newAcc = acc.clone();
+                    newAcc.put(curKey, keyValue.get(curKey));
+                    outputCollection.add(newAcc);
+                }
             }
         }
 

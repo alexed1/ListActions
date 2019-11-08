@@ -3,9 +3,12 @@ public with sharing class JoinCollections {
     public static List <Results> joinCollections(List<Requests> requestList) {
 
         Results response = new Results();
-
-        response.outputCollection.addAll(requestList[0].inputCollection);
-        response.outputCollection.addAll(requestList[0].inputCollection2);
+        if (requestList[0].inputCollection != null && !requestList[0].inputCollection.isEmpty()) {
+            response.outputCollection.addAll(requestList[0].inputCollection);
+        }
+        if (requestList[0].inputCollection2 != null && !requestList[0].inputCollection2.isEmpty()) {
+            response.outputCollection.addAll(requestList[0].inputCollection2);
+        }
 
         List<Results> responseWrapper = new List<Results>();
         responseWrapper.add(response);

@@ -3,9 +3,11 @@ public with sharing class CopyCollection {
     public static List <Results> copyCollection(List<Requests> requestList) {
 
         Results response = new Results();
-        List<Account> inputCollection  = requestList[0].inputCollection;
+        List<Account> inputCollection = requestList[0].inputCollection;
 
-        response.outputCollection = inputCollection.clone();
+        if (inputCollection != null && !inputCollection.isEmpty()) {
+            response.outputCollection = inputCollection.clone();
+        }
 
         List<Results> responseWrapper = new List<Results>();
         responseWrapper.add(response);

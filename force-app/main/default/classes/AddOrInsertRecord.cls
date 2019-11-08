@@ -1,19 +1,20 @@
 public with sharing class AddOrInsertRecord {
     @InvocableMethod
-    public static List <Results> copyCollection(List<Requests> requestList) {
+    public static List <Results> addOrInsertRecord(List<Requests> requestList) {
 
         Results response = new Results();
         List<Account> inputCollection = requestList[0].inputCollection;
         Account inputRecord = requestList[0].inputRecord;
         Integer index = requestList[0].index;
 
-        if (index == null || index >= inputCollection.size()) {
-            inputCollection.add(inputRecord);
-        } else {
-            inputCollection.add(index, inputRecord);
+        if (inputCollection != null && inputRecord != null) {
+            if (index == null || index >= inputCollection.size()) {
+                inputCollection.add(inputRecord);
+            } else {
+                inputCollection.add(index, inputRecord);
+            }
+            response.outputCollection = inputCollection.clone();
         }
-
-        response.outputCollection = inputCollection.clone();
 
         List<Results> responseWrapper = new List<Results>();
         responseWrapper.add(response);

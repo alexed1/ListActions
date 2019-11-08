@@ -5,26 +5,29 @@ global with sharing class SortCollection {
         SortKeys sk = (SortKeys) JSON.deserialize(requestList[0].sortKeys, SortKeys.class);
         List<Account> outputCollection = requestList[0].inputCollection;
 
-        List<String> allFields = new List<String>();
-        for (SortKeyMember skm : sk.sortKeys) {
-            allFields.add(skm.field);
-        }
-
-        if (!outputCollection.isEmpty()) {
-            Map<String, String> fieldTypes = getFieldTypes(outputCollection[0], allFields);
-
+        if (outputCollection != null && !outputCollection.isEmpty()) {
+            List<String> allFields = new List<String>();
             for (SortKeyMember skm : sk.sortKeys) {
-                List<SortableWrapper> sortable = new List<SortableWrapper>();
-                for (Account acc : outputCollection) {
-                    sortable.add(new SortableWrapper(acc, skm.field, skm.direction == 'DESC' ? -1 : 1, fieldTypes.get(skm.field)));
-                }
-                sortable.sort();
-                outputCollection.clear();
-                for (SortableWrapper sw : sortable) {
-                    outputCollection.add(sw.acc);
+                allFields.add(skm.field);
+            }
+
+            if (!outputCollection.isEmpty()) {
+                Map<String, String> fieldTypes = getFieldTypes(outputCollection[0], allFields);
+
+                for (SortKeyMember skm : sk.sortKeys) {
+                    List<SortableWrapper> sortable = new List<SortableWrapper>();
+                    for (Account acc : outputCollection) {
+                        sortable.add(new SortableWrapper(acc, skm.field, skm.direction == 'DESC' ? -1 : 1, fieldTypes.get(skm.field)));
+                    }
+                    sortable.sort();
+                    outputCollection.clear();
+                    for (SortableWrapper sw : sortable) {
+                        outputCollection.add(sw.acc);
+                    }
                 }
             }
         }
+
         Results response = new Results();
         response.outputCollection = outputCollection;
         List<Results> responseWrapper = new List<Results>();
