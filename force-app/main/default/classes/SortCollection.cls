@@ -1,8 +1,17 @@
 global with sharing class SortCollection {
     @InvocableMethod
     public static List <Results> sort(List<Requests> requestList) {
+        List<String> rawData = requestList[0].sortKeys.replaceAll('"+| +', '').split(',');
+        SortKeys sk = new SortKeys();
+        for (String rd : rawData) {
+            if (rd != null && rd.length() > 2) {
+                List<String> fieldDirection = rd.split(':');
+                if (fieldDirection.size() == 2) {
+                    sk.sortKeys.add(new SortKeyMember(fieldDirection[0], fieldDirection[1]));
+                }
+            }
+        }
 
-        SortKeys sk = (SortKeys) JSON.deserialize(requestList[0].sortKeys, SortKeys.class);
         List<Account> outputCollection = requestList[0].inputCollection;
 
         if (outputCollection != null && !outputCollection.isEmpty()) {
@@ -129,8 +138,15 @@ global with sharing class SortCollection {
 
     private class SortKeys {
         List<SortKeyMember> sortKeys;
+        public SortKeys() {
+            sortKeys = new List<SortKeyMember>();
+        }
     }
     private class SortKeyMember {
+        public SortKeyMember(String field, String direction) {
+            this.field = field;
+            this.direction = direction;
+        }
         String field;
         String direction;
     }
