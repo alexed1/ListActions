@@ -23,21 +23,20 @@ export default class sortCollection extends LightningElement {
 
     @api
     get sortKeys() {
-        return JSON.stringify({
-            sortKeys: this.lines.map(curLine => {
-                return {field: curLine.field, direction: curLine.direction}
-            })
-        });
+        return this.lines.map(curLine => {
+            return '"' + curLine.field + '":"' + curLine.direction + '"';
+        }).join(',');
     }
 
     set sortKeys(value) {
         this.lastLinePosition = 0;
         if (value) {
-            let val = JSON.parse(value);
-            if (val.sortKeys && val.sortKeys.length) {
-                this.lines = val.sortKeys.map((curKey, index) => {
+            let val = value.split(',');
+            if (val && val.length) {
+                this.lines = val.map((curKey, index) => {
                     this.lastLinePosition = index;
-                    return {...curKey, ...{position: index}}
+                    let rawKeyValue = curKey.replace(/"/g, '').split(':');
+                    return {...{field: rawKeyValue[0], direction: rawKeyValue[1], position: index}}
                 });
             }
         }
