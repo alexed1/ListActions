@@ -1,7 +1,11 @@
 # List Actions
 
 
-SortCollection
+#MapCollection
+This action replaces specified fields with values you pass to it.
+
+
+##SortCollection
 
 SortKeys currently expects a string in the form 
 '{"sortkeys": [
