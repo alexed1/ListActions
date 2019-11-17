@@ -79,6 +79,33 @@
         </outputParameters>
     </actionCalls>
     <actionCalls>
+        <name>Generate_Report</name>
+        <label>Generate Report</label>
+        <locationX>149</locationX>
+        <locationY>464</locationY>
+        <actionName>GenerateCollectionReport</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Show_Report</targetReference>
+        </connector>
+        <inputParameters>
+            <name>shownFields</name>
+            <value>
+                <stringValue>Rating, Industry</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>inputCollection</name>
+            <value>
+                <elementReference>output_collection</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>result_report</assignToReference>
+            <name>reportString</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>Join_Collections</name>
         <label>Join Collections</label>
         <locationX>513</locationX>
@@ -113,7 +140,7 @@
         <actionName>MapCollection</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Loop_through_filterred_accounts</targetReference>
+            <targetReference>Generate_Report</targetReference>
         </connector>
         <inputParameters>
             <name>inputCollection</name>
@@ -124,7 +151,7 @@
         <inputParameters>
             <name>keyValuePairs</name>
             <value>
-                <stringValue>&quot;Name&quot;, &quot;SomeName&quot;</stringValue>
+                <stringValue>&quot;rating&quot;:&quot;Hot&quot;,&quot;Industry&quot;:&quot;Banking&quot;,&quot;Name&quot;:&quot;SomeName&quot;</stringValue>
             </value>
         </inputParameters>
         <outputParameters>
@@ -296,7 +323,7 @@
         <locationY>344</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Join_Collections</targetReference>
+            <targetReference>map_collection</targetReference>
         </connector>
         <object>Account</object>
         <outputReference>input_collection</outputReference>
@@ -359,6 +386,22 @@
                 <assignToReference>result_formula</assignToReference>
                 <name>value</name>
             </outputParameters>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Show_Report</name>
+        <label>Show Report</label>
+        <locationX>135</locationX>
+        <locationY>591</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>show_result_report</name>
+            <fieldText>&lt;p&gt;{!result_report}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -457,6 +500,13 @@
     </variables>
     <variables>
         <name>result_formula</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>result_report</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
