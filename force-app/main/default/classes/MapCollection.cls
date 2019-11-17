@@ -1,13 +1,16 @@
 public with sharing class MapCollection {
     @InvocableMethod
     public static List <Results> mapCollection(List<Requests> requestList) {
-
-        List<Account> outputCollection = new List<Account>();
+        Results response = new Results();
         List<Account> inputCollection = requestList[0].inputCollection;
+        List<Account> outputCollection = new List<Account>();
         String keyValuePairs = requestList[0].keyValuePairs;
         if (inputCollection != null && !inputCollection.isEmpty() && keyValuePairs != null) {
+            for (Account acc : inputCollection) {
+                outputCollection.add(acc.clone());
+            }
 
-            Pattern mPattern = pattern.compile('([^,"\\s*]+)');
+            Pattern mPattern = pattern.compile('([^,:"\\s*]+)');
             Matcher mMatcher = mPattern.matcher(keyValuePairs);
             Map<String, String> keyValue = new Map<String, String>();
             String key;
@@ -21,15 +24,16 @@ public with sharing class MapCollection {
             }
 
             for (String curKey : keyValue.keySet()) {
-                for (Account acc : inputCollection) {
-                    Account newAcc = acc.clone();
-                    newAcc.put(curKey, keyValue.get(curKey));
-                    outputCollection.add(newAcc);
+                for (Account acc : outputCollection) {
+                    try{
+                        acc.put(curKey, keyValue.get(curKey));
+                    }catch (Exception ex){
+                        response.errors+=ex.getMessage();
+                    }
                 }
             }
         }
 
-        Results response = new Results();
         response.outputCollection = outputCollection;
         List<Results> responseWrapper = new List<Results>();
         responseWrapper.add(response);
