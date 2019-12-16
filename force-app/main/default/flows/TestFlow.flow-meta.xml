@@ -54,8 +54,8 @@
     <actionCalls>
         <name>Filter_Collection</name>
         <label>Filter Collection</label>
-        <locationX>520</locationX>
-        <locationY>277</locationY>
+        <locationX>522</locationX>
+        <locationY>208</locationY>
         <actionName>FilterCollection</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -349,48 +349,6 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
-        <name>expression_builder_container</name>
-        <label>Expression Builder Container</label>
-        <locationX>281</locationX>
-        <locationY>196</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <connector>
-            <targetReference>Filter_Collection</targetReference>
-        </connector>
-        <fields>
-            <name>expression_builder_lwc</name>
-            <extensionName>c:expressionBuilder</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>addButtonLabel</name>
-                <value>
-                    <stringValue>Add</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>contextRecordObjectName</name>
-                <value>
-                    <stringValue>Account</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>value</name>
-                <value>
-                    <elementReference>result_formula</elementReference>
-                </value>
-            </inputParameters>
-            <isRequired>true</isRequired>
-            <outputParameters>
-                <assignToReference>result_formula</assignToReference>
-                <name>value</name>
-            </outputParameters>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>false</showHeader>
-    </screens>
-    <screens>
         <name>Show_Report</name>
         <label>Show Report</label>
         <locationX>135</locationX>
@@ -504,6 +462,9 @@
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>true</isOutput>
+        <value>
+            <stringValue>AND($Account.IsDeleted != BOOLEAN(&quot;false&quot;), CONTAINS($Account.Name, TEXT(&quot;Test&quot;)))</stringValue>
+        </value>
     </variables>
     <variables>
         <name>result_report</name>
