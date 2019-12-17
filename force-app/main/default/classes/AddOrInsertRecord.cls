@@ -3,8 +3,8 @@ public with sharing class AddOrInsertRecord {
     public static List <Results> addOrInsertRecord(List<Requests> requestList) {
 
         Results response = new Results();
-        List<Account> inputCollection = requestList[0].inputCollection;
-        Account inputRecord = requestList[0].inputRecord;
+        List<SObject> inputCollection = requestList[0].inputCollection;
+        SObject inputRecord = requestList[0].inputRecord;
         Integer index = requestList[0].index;
 
         if (inputCollection != null && inputRecord != null) {
@@ -24,9 +24,9 @@ public with sharing class AddOrInsertRecord {
 
     public class Requests {
         @InvocableVariable(required=true)
-        public List<Account> inputCollection;
+        public List<SObject> inputCollection;
         @InvocableVariable(required=true)
-        public Account inputRecord;
+        public SObject inputRecord;
         @InvocableVariable
         public Integer index;
     }
@@ -34,10 +34,10 @@ public with sharing class AddOrInsertRecord {
     public class Results {
 
         public Results() {
-            outputCollection = new List<Account>();
+            outputCollection = new List<SObject>();
         }
 
         @InvocableVariable
-        public List<Account> outputCollection;
+        public List<SObject> outputCollection;
     }
 }

@@ -20,7 +20,7 @@ public with sharing class RemoveRecordInCollection {
 
     public class Requests {
         @InvocableVariable(required=true)
-        public List<Account> inputCollection;
+        public List<SObject> inputCollection;
         @InvocableVariable(required=true)
         public Integer index;
     }
@@ -28,10 +28,10 @@ public with sharing class RemoveRecordInCollection {
     public class Results {
 
         public Results() {
-            outputCollection = new List<Account>();
+            outputCollection = new List<SObject>();
         }
 
         @InvocableVariable
-        public List<Account> outputCollection;
+        public List<SObject> outputCollection;
     }
 }

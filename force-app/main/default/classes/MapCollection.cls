@@ -2,11 +2,11 @@ public with sharing class MapCollection {
     @InvocableMethod
     public static List <Results> mapCollection(List<Requests> requestList) {
         Results response = new Results();
-        List<Account> inputCollection = requestList[0].inputCollection;
-        List<Account> outputCollection = new List<Account>();
+        List<SObject> inputCollection = requestList[0].inputCollection;
+        List<SObject> outputCollection = new List<SObject>();
         String keyValuePairs = requestList[0].keyValuePairs;
         if (inputCollection != null && !inputCollection.isEmpty() && keyValuePairs != null) {
-            for (Account acc : inputCollection) {
+            for (SObject acc : inputCollection) {
                 outputCollection.add(acc.clone());
             }
 
@@ -24,7 +24,7 @@ public with sharing class MapCollection {
             }
 
             for (String curKey : keyValue.keySet()) {
-                for (Account acc : outputCollection) {
+                for (SObject acc : outputCollection) {
                     try{
                         acc.put(curKey, keyValue.get(curKey));
                     }catch (Exception ex){
@@ -44,7 +44,7 @@ public with sharing class MapCollection {
     }
     public class Requests {
         @InvocableVariable(required=true)
-        public List<Account> inputCollection;
+        public List<SObject> inputCollection;
 
         @InvocableVariable(required=true)
         public String keyValuePairs;
@@ -54,12 +54,12 @@ public with sharing class MapCollection {
     public class Results {
 
         public Results() {
-            outputCollection = new List<Account>();
+            outputCollection = new List<SObject>();
         }
         @InvocableVariable
         public String errors;
 
         @InvocableVariable
-        public List<Account> outputCollection;
+        public List<SObject> outputCollection;
     }
 }

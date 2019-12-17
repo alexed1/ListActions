@@ -2,7 +2,20 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/expressionBuilder": [
+                "expressionBuilder/expressionBuilder.js"
+            ],
+            "c/expressionLine": [
+                "expressionLine/expressionLine.js"
+            ],
+            "c/sortCollection": [
+                "sortCollection/sortCollection.js"
+            ],
+            "c/sortCollectionLine": [
+                "sortCollectionLine/sortCollectionLine.js"
+            ]
+        }
     },
     "include": [
         "**/*",

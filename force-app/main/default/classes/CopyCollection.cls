@@ -3,7 +3,7 @@ public with sharing class CopyCollection {
     public static List <Results> copyCollection(List<Requests> requestList) {
 
         Results response = new Results();
-        List<Account> inputCollection = requestList[0].inputCollection;
+        List<SObject> inputCollection = requestList[0].inputCollection;
 
         if (inputCollection != null && !inputCollection.isEmpty()) {
             response.outputCollection = inputCollection.clone();
@@ -17,16 +17,16 @@ public with sharing class CopyCollection {
 
     public class Requests {
         @InvocableVariable(required=true)
-        public List<Account> inputCollection;
+        public List<SObject> inputCollection;
     }
 
     public class Results {
 
         public Results() {
-            outputCollection = new List<Account>();
+            outputCollection = new List<SObject>();
         }
 
         @InvocableVariable
-        public List<Account> outputCollection;
+        public List<SObject> outputCollection;
     }
 }

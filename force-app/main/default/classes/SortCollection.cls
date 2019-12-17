@@ -12,7 +12,7 @@ global with sharing class SortCollection {
             }
         }
 
-        List<Account> outputCollection = requestList[0].inputCollection;
+        List<SObject> outputCollection = requestList[0].inputCollection;
 
         if (outputCollection != null && !outputCollection.isEmpty()) {
             List<String> allFields = new List<String>();
@@ -25,7 +25,7 @@ global with sharing class SortCollection {
 
                 for (SortKeyMember skm : sk.sortKeys) {
                     List<SortableWrapper> sortable = new List<SortableWrapper>();
-                    for (Account acc : outputCollection) {
+                    for (SObject acc : outputCollection) {
                         sortable.add(new SortableWrapper(acc, skm.field, skm.direction == 'DESC' ? -1 : 1, fieldTypes.get(skm.field)));
                     }
                     sortable.sort();
@@ -48,12 +48,12 @@ global with sharing class SortCollection {
 
     global class SortableWrapper implements Comparable {
 
-        public Account acc;
+        public SObject acc;
         public String field;
         public Integer direction;
         public String fieldType;
 
-        public SortableWrapper(Account acc, String field, Integer direction, String fieldType) {
+        public SortableWrapper(SObject acc, String field, Integer direction, String fieldType) {
             this.acc = acc;
             this.field = field;
             this.direction = direction;
@@ -103,8 +103,8 @@ global with sharing class SortCollection {
         }
     }
 
-    private static Map<String, String> getFieldTypes(Account acc, List<String> fieldNames) {
-        //Assuming Account will be replaced with generic SObject
+    private static Map<String, String> getFieldTypes(SObject acc, List<String> fieldNames) {
+        //Assuming SObject will be replaced with generic SObject
         Schema.SObjectType r = acc.Id.getSObjectType();
 
         Map<String, String> resultMap = new Map<String, String>();
@@ -119,7 +119,7 @@ global with sharing class SortCollection {
 
     public class Requests {
         @InvocableVariable(required=true)
-        public List<Account> inputCollection;
+        public List<SObject> inputCollection;
 
         @InvocableVariable(required=true)
         public String sortKeys;
@@ -129,11 +129,11 @@ global with sharing class SortCollection {
     public class Results {
 
         public Results() {
-            outputCollection = new List<Account>();
+            outputCollection = new List<SObject>();
         }
 
         @InvocableVariable
-        public List<Account> outputCollection;
+        public List<SObject> outputCollection;
     }
 
     private class SortKeys {

@@ -2,14 +2,14 @@ public with sharing class GenerateCollectionReport {
     @InvocableMethod
     public static List <Results> generateReport(List<Requests> requestList) {
 
-        List<Account> inputCollection = requestList[0].inputCollection;
+        List<SObject> inputCollection = requestList[0].inputCollection;
         String shownFields = requestList[0].shownFields;
         String reportString = '';
         if (inputCollection != null && !inputCollection.isEmpty() && shownFields != null) {
             reportString += 'Collection Type: ' + inputCollection[0].getSObjectType().getDescribe().getName() + '\n\n';
             List<String> shownFieldsArray = shownFields.replaceAll('[^a-zA-Z0-9\\,]', '').split(',');
             if (!shownFieldsArray.isEmpty()) {
-                for (Account acc : inputCollection) {
+                for (SObject acc : inputCollection) {
                     reportString += 'Record: ' + (acc.get('Name') != null ? acc.get('Name') : (acc.get('Id') != null ? acc.get('Id') : ''))+'\n';
                     for (String fieldName : shownFieldsArray) {
                         reportString += fieldName + ' : ' + acc.get(fieldName)+'\n';
@@ -30,7 +30,7 @@ public with sharing class GenerateCollectionReport {
     }
     public class Requests {
         @InvocableVariable(required=true)
-        public List<Account> inputCollection;
+        public List<SObject> inputCollection;
 
         @InvocableVariable(required=true)
         public String shownFields;

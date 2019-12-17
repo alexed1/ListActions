@@ -1,10 +1,10 @@
 public  with sharing class FormulaEvaluator {
 
     public static String parseFormula(String formula, String context) {
-        List<ContextWraper> contextResult = (List<ContextWraper>)JSON.deserialize(context, List<ContextWraper>.class);
+        List<ContextWrapper> contextResult = (List<ContextWrapper>)JSON.deserialize(context, List<ContextWrapper>.class);
         Map<String, String> mapParameters = new Map<String, String>();
 
-        for (ContextWraper cont : contextResult) {
+        for (ContextWrapper cont : contextResult) {
             if (!String.isEmpty(cont.value) && cont.name == '$Record') {
                 //TODO: replace Schema.getGlobalDescribe() code with recordId.getSObjectType();
                 String keyPrefix = cont.value.substring(0,3);
@@ -461,11 +461,11 @@ public  with sharing class FormulaEvaluator {
         context.outputString = context.outputString.replaceAll('\\s+',' ');
     }
 
-    public class ContextWraper {
+    public class ContextWrapper {
         public String name;
         public String value;
 
-        public ContextWraper(String name, String value) {
+        public ContextWrapper(String name, String value) {
             this.name = name;
             this.value = value;
         }

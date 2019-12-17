@@ -3,7 +3,7 @@ public with sharing class FindRecordsInCollection {
     @InvocableMethod
     public static List <Results> execute (List<Requests> requestList) {
         System.debug('entering FindRecordInCollection');
-        List<ApprovalProcessStepDefinition__c>  inputCollection = requestList[0].inputCollection;
+        List<SObject>  inputCollection = requestList[0].inputCollection;
         String targetField = requestList[0].targetField;
         String targetValue = requestList[0].targetValue;
         String targetObject = requestList[0].targetObject;
@@ -16,10 +16,10 @@ public with sharing class FindRecordsInCollection {
         //iterate through input collection
         //check the value of the current input  
         Schema.SobjectField curField = getFieldByName(targetObject,targetField);
-        for(ApprovalProcessStepDefinition__c curApprovalProcessStepDefinition : inputCollection) {
-            String value = (String)curApprovalProcessStepDefinition.get(curField);
+        for(SObject curRecord : inputCollection) {
+            String value = (String)curRecord.get(curField);
             if (value == targetValue){
-                response.multipleOutputMembers.add(curApprovalProcessStepDefinition);
+                response.multipleOutputMembers.add(curRecord);
             }
         }
 
@@ -58,7 +58,7 @@ public with sharing class FindRecordsInCollection {
 
     public  class Requests {
       @InvocableVariable(required=true)
-      public List<ApprovalProcessStepDefinition__c> inputCollection;
+      public List<SObject> inputCollection;
 
       @InvocableVariable
       public String targetObject;
@@ -74,14 +74,14 @@ public with sharing class FindRecordsInCollection {
     public  class Results {
 
         public Results() {
-           singleOutputMember = new ApprovalProcessStepDefinition__c();
-           multipleOutputMembers = new List<ApprovalProcessStepDefinition__c>();
+           
+           multipleOutputMembers = new List<SObject>();
         }
      
       @InvocableVariable
-      public ApprovalProcessStepDefinition__c singleOutputMember;
+      public SObject singleOutputMember;
 
       @InvocableVariable
-      public List<ApprovalProcessStepDefinition__c> multipleOutputMembers;
+      public List<SObject> multipleOutputMembers;
     }
 }

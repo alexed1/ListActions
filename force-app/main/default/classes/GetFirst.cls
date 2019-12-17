@@ -4,12 +4,11 @@ public with sharing class GetFirst {
     @InvocableMethod
     public static List <Results> execute (List<Requests> requestList) {
         System.debug('entering getFirst');
-        List<ApprovalProcessStepDefinition__c>  inputCollection = requestList[0].inputCollection;
+        List<SObject>  inputCollection = requestList[0].inputCollection;
         Boolean enforceSingle = requestList[0].enforceSingleMember;
        
-        //TODO if enforceSingle is set, throw an error if count of input collection is not 1
-        
-        ApprovalProcessStepDefinition__c  outputMember = inputCollection[0];
+        //TODO if enforceSingle is set, throw an error if count of input collection is not 1 
+        SObject  outputMember = inputCollection[0];
         
         //Create a Results object to hold the return values
         Results response = new Results();
@@ -26,17 +25,17 @@ public with sharing class GetFirst {
 
     public class Requests {
       @InvocableVariable(required=true)
-      public List<ApprovalProcessStepDefinition__c> inputCollection;
+      public List<SObject> inputCollection;
 
       @InvocableVariable
-      public Boolean enforceSingleMember;
+      public Boolean enforceSingleMember; //not yet implemented
         
     }
     
     public class Results {
      
       @InvocableVariable
-      public ApprovalProcessStepDefinition__c outputMember;
+      public SObject outputMember;
 
     }
 
